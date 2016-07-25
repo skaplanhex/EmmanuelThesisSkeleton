@@ -1,0 +1,153 @@
+%%%%%%%%%%%%% Collision Data and Simulations %%%%%%%%%%%%%%%%%%%%
+\chapter{Collision Data and Simulations}
+
+
+%%%%%%%%%%%%% Collision data %%%%%%%%%%%%%%%%%%%%
+\section{Collision data}
+\label{sec:CollsionData}
+
+
+% List of Collision Data samples 
+\begin{table*}[!hbtp]
+\centering
+\caption{Dataset names from $\Pp \Pp$ collisions.}
+\label{tab:TableDataNames}
+\begin{tabular}{l|c|c}
+\hline \hline
+Primary dataset name & Run range & Luminosity $\mathcal{L}$ (fb$^{-1}$) \\
+\hline \hline
+/MuEG/Run2012A-recover-06Aug2012-v1 & 190782 -- 190949 & 0.082 \\
+/MuEG/Run2012A-13Jul2012-v1 & 190456 -- 193621 & 0.808 \\ % 0.809
+/MuEG/Run2012B-13Jul2012-v1 & 193834 -- 196531 & 4.428 \\ % 4.403
+/MuEG/Run2012C-24Aug2012-v1 & 198049 -- 198522 & 0.495 \\
+/MuEG/Run2012C-PromptReco-v2 & 98941 -- 203742 & 6.401 \\ % 6.584
+/MuEG/Run2012D-PromptReco-v1 & 203777 -- 209151 & 7.273 \\ % 7.718
+\hline
+/DoubleMu/Run2012A-recover-06Aug2012-v1 & 190782 -- 190949 & 0.082 \\
+/DoubleMu/Run2012A-13Jul2012-v1 & 190456 -- 193621 & 0.808 \\ % 0.809
+/DoubleMu/Run2012B-13Jul2012-v4 & 193834 -- 196531 & 4.428 \\ % 4.403
+/DoubleMu/Run2012C-24Aug2012-v1 & 198049 -- 198522 & 0.495 \\
+/DoubleMu/Run2012C-PromptReco-v2 & 98941 -- 203742 & 6.401 \\ % 6.557
+/DoubleMu/Run2012D-PromptReco-v1 & 203777 -- 209151 & 7.273 \\ % 7.719
+\hline
+/DoubleElectron/Run2012A-recover-06Aug2012-v1 & 190782 -- 190949 & 0.082 \\
+/DoubleElectron/Run2012A-13Jul2012-v1 & 190456 -- 193621 & 0.808 \\ % 0.809
+/DoubleElectron/Run2012B-13Jul2012-v1 & 193834 -- 196531 & 4.428 \\ % 4.403
+/DoubleElectron/Run2012C-24Aug2012-v1 & 198049 -- 198522 & 0.495 \\
+/DoubleElectron/Run2012C-PromptReco-v2 & 98941 -- 203742 & 6.401 \\ % 6.575
+/DoubleElectron/Run2012D-PromptReco-v1 & 203777 -- 209151 & 7.273 \\ % 7.727
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Simulated samples %%%%%%%%%%%%%%%%%%%%
+\section{Simulated samples}
+\label{sec:SimulatedSamples}
+
+
+%%%%%%%%%%%%% Monte Carlo simulations %%%%%%%%%%%%%%%%%%%%
+\subsection{Monte Carlo simulations}
+\label{sec:MonteCarloSimulations}
+
+
+%%%%%%%%%%%%% Parton distribution functions and matrix elements %%%%%%%%%
+\subsubsection*{Parton distribution functions and matrix elements}
+
+
+%%%%%%%%%%%%% Parton showering, fragmentation, and hadronization %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Parton showering, fragmentation, and hadronization}
+
+
+%%%%%%%%%%%%% The underlying event %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{The underlying event}
+
+
+%%%%%%%%%%%%% Jet matching procedure %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Jet matching procedure}
+
+
+%%%%%%%%%%%%% Detector simulation %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Detector simulation}
+
+
+%%%%%%%%%%%%% Monte Carlo scaling %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Monte Carlo scaling}
+
+\begin{flalign}
+w = \frac{\epsilon_{\textrm{filtering}} \cdot \sigma \cdot \mathcal{B} \cdot \mathcal{L}_{\textrm{int}}}{\textrm{N}_{\textrm{gen}}},
+\end{flalign}
+
+
+%%%%%%%%%%%%% Pileup scale factor %%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Pileup re-weighting}
+
+
+%%%%%%%%%%%%% Background samples %%%%%%%%%%%%%%%%%%%%
+\subsection{Background samples}
+
+
+% MC simulation samples
+\begin{table*}[!hbtp]
+\small
+\centering
+\caption{List of simulations for background estimations.}
+\label{tab:TableMCNames}
+\begin{tabular}{l}
+\hline \hline
+Simulation names \\
+\hline
+/TTJets\_FullLeptMGDecays\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v2 \\
+/TTJets\_SemiLeptMGDecays\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A\_ext-v1 \\ 
+/TTWJets\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1/AODSIM \\ 
+/TTZJets\_8TeV-madgraph\_v2/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1/AODSIM \\
+/TBZToLL\_4F\_TuneZ2star\_8TeV-madgraph-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7C-v1 \\
+/ZZJetsTo4L\_TuneZ2star\_8TeV-madgraph-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/WZJetsTo3LNu\_TuneZ2\_8TeV-madgraph-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/GluGluToHToTauTau\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+\footnotesize /GluGluToHToWWTo2LAndTau2Nu\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/GluGluToHToZZTo4L\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/VBF\_HToTauTau\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+\footnotesize /VBF\_HToWWTo2LAndTau2Nu\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/VBF\_HToZZTo4L\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/WH\_ZH\_TTH\_HToTauTau\_M-125\_8TeV-pythia6-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+/WH\_ZH\_TTH\_HToWW\_M-125\_8TeV-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1 \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+\begin{table*}[!hbtp]
+\centering
+\caption{Number of generated events and cross sections for background simulations.}
+\label{tab:TableMCInformation}
+\begin{tabular}{l|c|c}
+\hline \hline
+SM background & Number of generated events &Cross section $\sigma$ (pb) \\
+\hline
+$\ttbar$ + jets (fully leptonic decay) & 12,119,013 & 23.08 \\ % 12,119,013
+$\ttbar$ + jets (semi-leptonic decay) & 25,423,514 & 97.97 \\ % 25,423,514
+$\ttbar \PW$ + jets &196,046 & 0.232 \\ % 196,046
+$\ttbar \cPZ$ + jets & 209,677 & 0.208 \\ % 209,677
+$\cPqt \cPqb \cPZ(\to \ell^{+} \ell^{-})$ & 148,504 & 0.0114  \\ % 148504
+$\cPZ \cPZ(\to 4\ell)$ + jets & 4,804,781 & 0.1769 \\ % 4,804,781
+$\PW \cPZ(\to 3\ell \Pgn)$ + jets & 2,016,678 & 1.0575 \\ % 2,016,678
+$\cPg \cPg \to \PH \to \Pgt \Pgt$ & 967,566 & 1.2466 \\ % 967566
+$\cPg \cPg \to \PH \to \PW \PW^{*} \to 2\ell 2\Pgn$ & 299,975 & 0.4437 \\ % 299975
+$\cPg \cPg \to \PH \to \cPZ \cPZ \to 4\ell$ & 995,117 & 0.0053 \\ % 995117
+$\PW \PW/\cPZ \cPZ \to \PH \to \Pgt \Pgt$ & 1,000,000 & 0.0992  \\ % 1000000
+$\PW \PW/\cPZ \cPZ \to \PH \to \PW \PW^{*} \to 2\ell 2\Pgn$ & 299,687 & 0.0282 \\ % 299687
+$\PW \PW/\cPZ \cPZ \to \PH \to \cPZ \cPZ^{*} \to 4\ell$ & 49,876 & 0.000423 \\ % 49876
+$\PW \PH/\cPZ \PH/\ttbar \PH(\to \Pgt \Pgt)$ & 200,000 & 0.0778 \\ % 200000
+$\PW \PH/\cPZ \PH/\ttbar \PH(\to \PW \PW^{*})$ & 200,408 & 0.254 \\ % 200408
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Signal samples %%%%%%%%%%%%%%%%%%%%
+\subsection{Signal samples}
+
+
+%%%%%%%%%%%%% My RPV scenario %%%%%%%%%%%%%%%%
+\subsubsection*{My RPV scenario}
+\label{sec:My RPV scenario}

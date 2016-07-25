@@ -1,0 +1,9 @@
+# Ignore everything in this directory
+*.aux
+*.log
+*.1
+*.mp
+*.t1
+
+# Ignore Mac OS hidden file
+.DS_Store

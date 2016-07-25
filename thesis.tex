@@ -1,0 +1,129 @@
+\documentclass[11pt]{ruthesis}
+
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{comment} 
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage{slashed}
+\usepackage{lmodern}
+\usepackage{mathrsfs}
+\usepackage[pdftex,bookmarks=true,bookmarksopenlevel=1]{hyperref}
+\usepackage{nextpage}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{degree}
+\usepackage{mathabx}
+\restoresymbol{Mathabx}{degree}
+\usepackage{booktabs}
+
+\special{papersize=8.5in,11in} %***for A4-default configurations on servers
+
+% Include defined symbols
+\input{pennames-pazo.sty}
+\input{ptdr-definitions.sty}
+\input{user-definitions.sty}
+
+
+\begin{document}
+
+\phd \title{A search for new physics with 300\,fb$^{-1}$ of $\sqrt{s}$ = 13~TeV LHC data}
+
+% Your name must exactly match what is on your transcript
+\author{PUT YOUR NAME HERE}
+
+\program{Physics and Astronomy}
+
+\director{PUT YOUR ADVISORS NAME HERE}
+
+% Physics has five committee members, including your advisor and one member external to the department
+% Side note: your external member must be approved by the GSNB - send the dept. grad director a copy of their CV to do that
+\approvals{5}
+
+\submissionyear{2016}
+
+% This is the month you will be awarded the degree, so one of January, May, or October
+\submissionmonth{October} 
+
+% Page ii is the abstract - Must not exceed 2,450 characters and 350 words.
+% The abstract should be relatively jargon-free but still contain any relevant keywords for search engines.
+\abstract{MY ABSTRACT GOES HERE}
+
+\beforepreface
+
+\acknowledgements{
+I would like to acknowledge Emmanuel for giving me this thesis outline
+}
+
+\dedication{
+\begin{center}
+\em{To Emmanuel for giving me this thesis outline} 
+\end{center}
+}
+
+\figurespage
+
+\tablespage
+
+\afterpreface
+
+
+%%%%%%%%%%%%%%%%%% Start of thesis %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% Theoretical Overview %%%%%%%%%%%%%%
+\input{chapters/Chapter1.tex}
+
+%%%%%%%%%%%%% Experimental Apparatus %%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter2.tex}
+
+%%%%%%%%%%%%% Collision Data and Simulations %%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter3.tex}
+
+%%%%%%%%%%%%% Event Reconstruction %%%%% %%%%%%%%%%%%%%%%%
+\input{chapters/Chapter4.tex}
+
+%%%%%%%%%%%%% Event Selection %%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter5.tex}
+
+%%%%%%%%%%%%% Event Classification %%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter6.tex}
+
+%%%%%%%%%%%%% Experimental uncertainties %%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter7.tex}
+
+%%%%%%%%%%%%% Statistical Methods  %%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter8.tex}
+
+%%%%%%%%%%%%% Experimental Results %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/Chapter9.tex}
+
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%
+\appendix
+\input{appendix/AppendixA.tex}
+
+\clearpage
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{singlespace}
+\bibliographystyle{plain}
+\bibliography{thesis.bib}
+\end{singlespace}
+
+%%%%%%%%%%%%%%%%%% End of thesis %%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+%\input{vita}
+
+
+\end{document}

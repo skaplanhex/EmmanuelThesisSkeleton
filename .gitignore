@@ -1,0 +1,14 @@
+# Ignore everything in this directory
+*.lot
+*.lof
+*.out
+*.aux
+*.log
+*.toc
+*.blg
+*.bbl
+*.synctex.gz
+*.synctex.gz(busy)
+
+# Ignore Mac OS hidden file
+.DS_Store

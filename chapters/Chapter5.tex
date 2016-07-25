@@ -1,0 +1,300 @@
+%%%%%%%%%%%%% Event Selection %%%%%%%%%%%%%%%%%%%%
+\chapter{Physics Object and Event Selections}
+\label{chap:PhysicsObjectEventSelections}
+
+
+%%%%%%%%%%%%% Objection identification %%%%%%%%%%%%%%%%%%%%
+\section{Objection identification and selection}
+\label{sec:ObjectionIdentificationSelection}
+
+
+%%%%%%%%%%%%% Muon selections %%%%%%%%%%%%%%%%%%%%
+\subsection{Muon selections}
+\label{sec:MuonSelections}
+
+
+We briefly describe the meaning of the different selection criteria below.
+\begin{itemize}
+\item We require PF muons with $\pt > 10\GeV$ and $\abs{\eta} < 2.4$.
+\item Global $\chi^{2}/\textrm{ndof}$ is the $\chi^{2}$ per degree of freedom of the 
+fit to the tracks left behind by the muon as it transverses the detector.
+\item \textbf{\textit{TrackerLayersWithMeasurement}}: is the number of tracker layers with hits.
+\end{itemize}
+
+
+\begin{table*}[!hbtp]
+\centering
+\caption{Muon selection requirements.}
+\label{tab:MuonSelections}
+\begin{tabular}{l|c}
+\hline \hline
+Muon observable & Selection \\
+\hline \hline
+Identification~(ID) & Particle Flow and Global \\
+Transverse momentum~$\pt$ & $> 10\GeV$ \\
+Pseudo rapidity~$\abs{\eta}$ & $< 2.4$ \\
+Global $\chi^{2}/\textrm{ndof}$ of the fit & $< 10$  \\
+Number of valid pixel hits & $>$ 0 \\
+TrackerLayersWithMeasurement & $>$5 \\
+Number of valid hits in muon chamber & $> 0$ \\
+Number of muon stations with muon segments & $> 1$ \\
+Transverse impact parameter~$\abs{d_{xy}(PV)}$ & $< 0.02\unit{cm}$ \\
+Longitudinal impact parameter~$\abs{d_{z}(PV)}$ & $< 0.5\unit{cm}$ \\
+Relative PF isolation~$I_{\textrm{rel}}$ within $\Delta{R} < 0.3$, & \\
+with beta corrections for pileup & $< 0.15$ \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Electron selections %%%%%%%%%%%%%%%%%%%%
+\subsection{Electron selections}
+\label{sec:ElectronSelections}
+
+ 
+We briefly describe the meaning of the different selection criteria below.
+\begin{itemize}
+\item We require PF electrons with $\pt > 10\GeV$ and $\abs{\eta} < 2.4$, but with the 
+additional requirement that electrons in the gap region $1.4442 < \abs{\eta} < 1.566$ 
+are rejected.
+\item $\Delta{\eta_{\textrm{In}}}$ is the pseudorapidity difference between SuperCluster position 
+and track direction at vertex extrapolated to ECAL assuming no radiation.
+\item $\Delta{\Phi_{\textrm{In}}}$ is the azimuthal difference between SuperCluster position 
+and track direction at vertex extrapolated to ECAL assuming no radiation.
+\item $\sigma_{i \eta i \eta}$ is the supercluster $\eta$ width taken from the covariance matrix 
+using logarithmic weights, where $i \eta$ represents the $i^{th}$ ECAL crystal in 
+the $\eta$ direction. In other words, it is the second moment of the ECAL energy cluster 
+distribution in the $\eta$ direction.
+\item Hadronic leakage variable $H/E$ is the ratio between the energy deposit recorded in 
+the HCAL tower, just behind the ECAL supercluster seed, and the ECAL supercluster
+energy associated with the electron.
+\item $\abs{1/E -1/p}$ is the absolute value of the difference between the reciprocal of the 
+electron energy and the reciprocal of the magnitude of the electron momentum.
+\item Conversion rejection cut allows for rejecting electrons identified as originating from 
+the conversion of a photon. Further information on photon conversion is found 
+in Section~\ref{sec:AsymmeticInternalPhotonConversionFakeRate}.
+\item Electrons are required to be $\Delta{R} > 0.1$ from selected muons.
+\end{itemize}
+
+
+\begin{table*}[!hbtp]
+\centering
+\caption{Electron selection requirements. Several electron ID criteria are different 
+for the barrel ($\abs{\eta} < 1.44$) and endcap ($1.56 < \abs{\eta} < 2.4$) regions.
+Electrons in the gap region $1.4442 < \abs{\eta} < 1.566$ are rejected.}
+\label{tab:ElectronSelections}
+\begin{tabular}{l|cc}
+\hline \hline
+\multirow{2}{*}{Electron observable} & \multicolumn{2}{c} {Selection} \\
+& Barrel & Endcap \\
+\hline \hline
+Identification~(ID) & Particle Flow &  Particle Flow \\
+Transverse momentum~$\pt$ & $> 10\GeV$ & $> 10\GeV$ \\
+Pseudo rapidity~$\abs{\eta}$ & $< 2.4$ & $< 2.4$ \\
+Spatial ($\eta$) matching between track and supercluster~$\Delta{\eta_{\textrm{In}}}$ & $< 0.007$ & $< 0.009$ \\
+Spatial ($\Phi$) matching between track and supercluster~$\Delta{\Phi_{\textrm{In}}}$ & $< 0.15$ & $< 0.10$ \\
+Transverse shape of the electromagnetic cluster~$\sigma_{i \eta i \eta}$ & $< 0.01$ & $< 0.03$ \\
+Hadronic leakage variable~$H/E$ & $< 0.12$ & $< 0.10$ \\
+Transverse impact parameter~$\abs{d_{xy}(PV)}$ & $< 0.02$ & $< 0.02\unit{cm}$ \\
+Longitudinal impact parameter~$\abs{d_{z}(PV)}$ & $< 0.1$ & $< 0.2\unit{cm}$ \\
+$\abs{1/E -1/p}$ & $< 0.05$ & $< 0.05$ \\
+Relative PF isolation $I_{\textrm{rel}}$ within~$\Delta{R} < 0.3$ & $< 0.15$ & $< 0.15$ \\ 
+Conversion rejection cut & 0 & 0 \\
+Number of missing expected inner tracker layer hits & $< 2$ & $< 2$ \\
+$\Delta{R}$ to nearest selected muon & $> 0.1$ & $> 0.1$ \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Photon selections %%%%%%%%%%%%%%%%%%%%
+\subsection{\texorpdfstring{$\tauh$}{Hadronic tau}-lepton selections}
+\label{sec:HadronicTauSelections}
+
+
+We briefly describe the meaning of the different selection criteria below.
+\begin{itemize}
+\item We require HPS PF Taus with $\pt > 20\GeV$ and $\abs{\eta} < 2.3$.
+\item \textbf{\textit{ByDecayModeFinding}}: A discriminant value that determines whether the HPS algorithm 
+is able to reconstruct one and three-prong decay modes for $\tauh$-lepton candidates.
+\item \textbf{\textit{AgainstElectronLoose}}: A discriminant value that rejects misidentified electrons, since 
+they are prone to be reconstructed as one-prong $\tauh$-leptons, by requiring  
+that the electron pion multivariate analysis (MVA) value is less than 0.6. 
+\item \textbf{\textit{AgainstMuonLoose}}: A discriminant that rejects misidentified muons by requiring
+that there is no $\Delta R$ matching between the leading track of the $\tauh$-lepton 
+candidate and chamber hits left by a muon.
+\item \textbf{\textit{ByLooseCombinedIsolationDBSumPtCorr}}: An isolation discriminant value corresponding 
+to the sum $\pt$ of all charged and neutral candidates in the isolation annulus, taking into account the effects of pileup, with $\pt$ greater than $0.5\GeV$ and $\Delta R = 0.5$.
+\item $\tauh$-leptons are required to be $\Delta{R} > 0.1$ from selected light-leptons.
+\end{itemize}
+
+
+\begin{table*}[!hbtp]
+\centering
+\caption{$\tauh$-lepton selection requirements.}
+\label{tab:HadronicTauSelections}
+\begin{tabular}{l|c}
+\hline \hline
+Hadronic $\tau$-lepton observable & Selection \\
+\hline \hline
+Identification (ID) & HPS Particle Flow \\
+Transverse momentum~$\pt$ & $> 20\GeV$ \\
+Pseudo rapidity~$\abs{\eta}$ & $< 2.3$ \\
+ByDecayModeFinding & 1  \\
+AgainstElectronLoose & 1 \\
+AgainstMuonLoose & 1 \\
+ByLooseCombinedIsolationDeltaBetaCorr & 1 \\
+PF isolation~$E^{\textrm{iso}}_{\tau}$ & $< 2.0\GeV$ \\
+$\Delta{R}$ to nearest selected light-leptons & $> 0.1$ \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Photon selections %%%%%%%%%%%%%%%%%%%%
+\subsection{Photon selections}
+\label{sec:PhotonSelections}
+
+
+A summary of all the photon selections is given in Table~\ref{tab:PhotonSelections}.
+
+\begin{table*}[!hbtp]
+\centering
+\caption{Photon selection requirements. Several photon ID criteria are different 
+for the barrel ($\abs{\eta} < 1.44$) and endcap ($1.56 < \abs{\eta} < 2.4$) regions.}
+\label{tab:PhotonSelections}
+\begin{tabular}{l|cc}
+\hline \hline
+\multirow{2}{*}{Photon observable} & \multicolumn{2}{c} {Selection} \\
+& Barrel & Endcap \\
+\hline \hline
+Transverse momentum~$\pt$ & $> 10\GeV$ & $> 10\GeV$ \\
+Pseudo rapidity~$\abs{\eta}$ & $< 2.4$ & $< 2.4$ \\
+Conversion safe electron veto &1&1 \\
+Single tower H/E & $< 0.06$ & $< 0.05$ \\
+Transverse shape of the electromagnetic cluster~$\sigma_{i \eta i \eta}$ & $< 0.011$ & $< 0.034$ \\
+Rho corrected relative PF charged hadron isolation & $< 0.06$ & $< 0.05$ \\
+Rho corrected relative PF neutral hadron isolation & $<$ 0.16 & $< 0.10$ \\
+Rho corrected PF photon isolation & $< 0.08$ & $< 0.12$ \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Jet selections %%%%%%%%%%%%%%%%%%%%
+\subsection{Jet selections}
+\label{sec:JetSelections}
+
+
+We briefly describe the meaning of the different selection criteria below.
+\begin{itemize}
+\item We require PF jets with $\pt > 30\GeV$ and $\abs{\eta} < 2.5$.
+\item \textbf{\textit{Number of constituents}}: A jet must consist of more than one constituent in its reconstruction. 
+\item \textbf{\textit{Residual corrections}}: For simulation samples we apply L1FastL2L3 corrections to 
+the PF jets, while for data we apply L1FastL2L3residual corrections. The $\pt$ and $\eta$ 
+dependence between simulation and data differ, therefore, a correction is applied to jets 
+in data in order to remove the observed difference.
+\item \textbf{\textit{Neutral hadron fraction}}: The fraction of energy deposited in the hadronic calorimeter 
+from neutral particles is required to be less than 0.99. 
+\item \textbf{\textit{Neutral EM fraction}}: The fraction of energy deposited in the electromagnetic calorimeter 
+from neutral particles is required to be less than 0.99.  
+\item \textbf{\textit{Charged hadron fraction}}: The fraction of energy deposited in the hadronic calorimeter 
+from charged particles must be greater than zero for $\abs{\eta} < 2.4$.
+\item \textbf{\textit{Charged EM fraction}}: The fraction of energy deposited in the electromagnetic calorimeter 
+from charged particles must be smaller than 0.99 for $\abs{\eta} < 2.4$.
+\end{itemize}
+
+
+\begin{table*}[!hbtp]
+\centering
+\caption{Jet selection requirements.}
+\begin{tabular}{l|cc}
+\hline \hline
+\multirow{1}{*}{Jet observable} & \multicolumn{1}{c} {Selection} \\
+\hline \hline
+Transverse momentum~$\pt$ & $> 30\GeV$ \\
+Pseudo rapidity~$\abs{\eta}$ & $< 2.5$ \\
+Number of constituents in jet &  $> 1$  \\
+Neutral hadron fraction of total jet energy &  $< 0.99$  \\
+Neutral EM fraction of total jet energy & $< 0.99$ \\
+Charged hadron fraction~$(\abs{\eta} < 2.4)$ & $> 0$ \\
+Charged EM fraction~$(\abs{\eta} < 2.4)$ & $< 0.99$ \\
+Number of tracks~$(\abs{\eta} < 2.4$) & $> 0$ \\
+\hline \hline
+\end{tabular}
+\end{table*}
+
+
+%%%%%%%%%%%%% Jet selections %%%%%%%%%%%%%%%%%%%%
+\subsection{Tagged \texorpdfstring{$b$}{b}-jet selections}
+\label{sec:TaggedBJetSelections}
+
+
+%%%%%%%%%%%%% Jet selections %%%%%%%%%%%%%%%%%%%%
+\subsection{\texorpdfstring{\MET}{Missing transverse energy} selection}
+\label{sec:METSelections}
+
+
+The quality selection requirements for $\MET$ is given by:
+\begin{itemize}
+\item We use PFMET physics objects.
+\item The following filters, recommended by the CMS collaboration, are 
+applied to $\MET$:
+\begin{itemize}
+\item \textbf{\textit{CSC tight beam halo filter}}: Secondary particle showers resulting 
+from beam-gas collisions in the vacuum chambers induce beam halo noise in the detector. 
+Therefore, this filter is used in order to identify events containing large beam backgrounds. 
+\item \textbf{\textit{HBHE noise filter}}: Rejects isolated noise originating from the HCAL 
+barrel and endcap readout electronics, which may be mis-reconstructed as hadronic 
+energy deposit.
+\item \textbf{\textit{ECAL dead cell trigger primitive filter}}: This is applied in order to 
+reject fake $\MET$ coming from high energy particles which have deposited their energy 
+in noisy crystal cells in the ECAL that have been left out of the event reconstruction. 
+\item \textbf{\textit{Tracking failure filter}}: The tracking algorithms may fail for some of its 
+iterations when too many clusters hits are found. Therefore, a selection requirement, based 
+on the ratio of the $\sum \pt$ of all tracks associated with the primary vertex to $\HT$ in the 
+event, is applied to reject such events. 
+\item \textbf{\textit{Bad EE Supercrystal filter}}: Designed to reject events containing 
+anomalously large energy in the ECAL endcap superclusters. 
+\item \textbf{\textit{Primary vertex filter}}: At least one ``good" primary vertex is required 
+to be reconstructed in the event. A PV is identified as good if it has a number of degree of 
+freedom $n_{dof} > 4$ and has a position of $\abs{z} < 24$ \unit{cm} and $\rho < 2$ \unit{cm}, 
+to reject noisy events, due to pileup, and ensure good collision candidates. 
+\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%% Trigger efficiency %%%%%%%%%%%%%%%%%%%%
+\section{Measurement of the lepton trigger efficiency}
+\label{sec:LeptonTriggerEfficiency}
+
+
+%%%%%%%%%%%%% Lepton isolation and identification efficiency %%%%%%%%%%%
+\section{Measurement of the lepton isolation and identification efficiency}
+\label{sec:LeptonEfficiency}
+
+
+
+%%%%%%%%%%%%% Applying B-jet weights and Systematics %%%%%%%%%%%%%%%%
+\subsection*{\texorpdfstring{$\cPqb$}{b}-tagging scale factor}
+\label{sec:BTaggingSF}
+
+
+For $\cPqb$-quark jets that are tagged as a $\cPqb$-jet, the scale factor for the event 
+is given by,
+\begin{flalign}
+SF = \prod^{N_{\textrm{jet}}}_{i=1} w^{\textrm{b-tagged}}_{i}, \textrm{~where~} w^{\textrm{b-tagged}}_{i} = \frac{\epsilon^{\textrm{Data}}_{i}}{\epsilon^{\textrm{MC}}_{i}},
+\end{flalign}
+whereas, for $\cPqb$-quark jets that are not tagged as a $\cPqb$-jet, the scale factor is given by,
+\begin{flalign}
+SF = \prod^{N_{\textrm{jet}}}_{i=1} w^{\textrm{not b-tagged}}_{i}, \textrm{~where~} w^{\textrm{not b-tagged}}_{i} = \frac{1 - \epsilon^{\textrm{Data}}_{i}}{1 - \epsilon^{\textrm{MC}}_{i}} = \frac{1 - w^{\textrm{b-tagged}}_{i} \cdot \epsilon^{\textrm{MC}}_{i}}{1 - \epsilon^{\textrm{MC}}_{i}}
+\end{flalign}
+where, $w^{\textrm{b-tagged}}$ and $\epsilon^{\textrm{MC}}$ are supplied by CMS. If an event has 
+both $\cPqb$-tagged and non-$\cPqb$-tagged jets then the overall scale factor is the product of the two 
+above expressions. Systematic uncertainties related to the $\cPqb$-tagging scale factors are described 
+in Section~\ref{sec:BTaggingSFUncertainty}.
+
+
+%%%%%%%%%%%%% Event selection %%%%%%%%%%%%%%%%%%%%
+\section{Event selection}
+\label{sec:EventSelection}
