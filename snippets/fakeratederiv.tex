@@ -1,0 +1,21 @@
+\documentclass[11pt]{article}
+\begin{document}
+\newcommand{\potj}{P_1(T|jet)}
+\newcommand{\pttj}{P_2(T|jet)}
+\newcommand{\polj}{P_1(L|jet)}
+\newcommand{\ptlj}{P_2(L|jet)}
+\subsection*{Derivation of Fake Rate Application}
+Recall that the fake rate $f$ is defined to be the ratio of the number of jets in a sample that pass the high-$pT$ ID (herein defined Tight) to the number of jets in that sample that pass what we will call the Loose selection.  This is to say:
+\begin{equation} \label{frdef}
+f=\frac{N_T}{N_L}
+\end{equation}
+Recall that this is not the probability for a jet to fake a photon, but the relative probabilities of a jet to pass different criteria.  In order to derive the expressions needed to obtain the fake backgrounds, we will need the conditional probabilities for an object to pass either Loose or Tight criteria given that we know that the object is a photon or a jet.  We assume that the Tight ID is fully efficient for photons and that the Loose ID will never be true for a photon.  From \ref{frdef}, we see that
+\begin{equation}
+P(T|jet)=\frac{f}{1+f}
+\end{equation}
+\begin{equation}
+P(L|jet)=\frac{1}{1+f}
+\end{equation}
+
+
+\end{document}
